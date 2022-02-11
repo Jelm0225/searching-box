@@ -1,0 +1,26 @@
+<section id="actions" class="py-4 header-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-1 col-md-2 col-sm-2">
+        <img src="../../../assets/img/Logo_ML.png">
+      </div>
+      <div class="col-lg-11 col-md-10 col-sm-10">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nunca dejes de buscar"
+            name = 'filter'
+            [(ngModel)]="filter"
+            />
+          <span
+            class="input-group-text"
+            style="cursor: pointer;"
+            (click)="goToViewItemsList()">
+              <img src="../../../assets/img/ic_Search.png">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

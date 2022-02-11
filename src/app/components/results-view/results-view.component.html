@@ -1,0 +1,39 @@
+<section id="actions" class="py-4 px-3 bg-container">
+  <div class="container">
+    <div class="row">
+      <div *ngIf="productList.length > 0" class="px-3 py-3 bg-white">
+        <div *ngFor="let product of productList">
+          <div class="row mb-2">
+            <div class="float-left col-lg-2 col-md-2 col-sm-2">
+              <a routerLink="/items/{{product.id}}">
+                <img class="img-thumbnail" style="width: 200px; height: 200px;" src={{product.picture}}>
+              </a>
+            </div>
+            <div class="d-flex py-3 col-lg-10 col-md-10 col-sm-10">
+              <div class="float-right col-lg-10 col-md-10 col-sm-10">
+                <h4>
+                  {{product.price.amount | currency}}  {{product.price.currency}} <img src="../../../assets/img/ic_shipping.png">
+                </h4>
+                <h5 class="text-secondary">
+                   <a class="text-secondary" routerLink="/items/{{product.id}}">
+                     {{product.title}}
+                    </a>
+                </h5>
+              </div>
+              <div class="float-left col-lg-2 col-md-2 col-sm-2">
+                <p class="text-secondary">
+                  {{ product.address.stateName }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
